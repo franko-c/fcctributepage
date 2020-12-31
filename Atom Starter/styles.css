@@ -1,0 +1,204 @@
+:root {
+    --primary: #ffadad; 
+    --secondary: #ffd6a5;
+    --tertiary: #fdffb6;
+    --quartiary: #caffbf; 
+    --five: #9bf6ff;
+    --six: #a0c4ff;
+    --seven: #bdb2ff;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    grid-template-areas:
+    ". banner banner banner banner"
+    "timeline header header header header"
+    "timeline main main main main"
+    "timeline album1 album2 album3 single1"
+    "footer footer footer footer footer";
+    font-family: inter, sans-serif;
+    background: #ebebeb;
+}
+.banner {
+    grid-area: banner;
+    text-align: center;
+    background: lightgrey;
+}
+header {
+    padding: 20px;
+    grid-area: header;
+    text-align: center;
+    background: grey;
+    color: white;
+}
+#image {
+    border-radius: 20%;
+    max-width: 100%;
+    height: auto;
+}
+main {
+    grid-area: main;
+    background: #243754;
+    color: white;
+    padding: 20px;
+}
+#album1 {
+    grid-area: album1;
+    text-align: center;
+    background: #94ae3f;
+    color: white;
+}
+#album2 {
+    grid-area: album2;
+    text-align: center;
+    background: #101321;
+    color: white;
+}
+#album3 {
+    grid-area: album3;
+    text-align: center;
+    background: #243754;
+    color: white;
+}
+#album3 img {
+    height: 300px;
+    width: 300px;
+}
+#single1 {
+    grid-area: single1;
+    text-align: center;
+    background: grey;
+    color: white;
+}
+#timeline {
+    grid-area: timeline;
+}
+#timeline h3 {
+    text-align: center;
+}
+#furtherinfo {
+    text-align: center;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        margin: 0;
+        margin-top: 3rem;
+        padding: 0;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "banner"
+                             "header"
+                             "main"
+                             "album1"
+                             "album2"
+                             "album3"
+                             "single1"
+                             "timeline"
+                             "footer";
+        grid-gap: 0rem;
+        font-family: inter, sans-serif;
+        text-align: center;
+        background: #ebebeb;
+    }
+    .banner h1 {
+        font-size: 28px;
+    }
+    header {
+        grid-area: header;
+        background: white;
+    }
+    header p {
+        font-size: 14px;
+        color: black;
+    }
+    main {
+        background: #243754;
+        color: white;
+        grid-area: main;
+    }
+    #image {
+        border-radius: 20%;
+        max-width: 100%;
+        height: auto;
+    }
+    #album1 {
+        background: #94ae3f;
+        color: white;
+        grid-area: album1;
+    }
+    #album1 p {
+        padding: 20px;
+    }
+    #album1 img {
+        border-radius: 20%;
+        width: auto;
+        height: auto;
+    }
+    #album2 {
+        background: #101321;
+        color: white;
+        grid-area: album2;
+    }
+    #album2 p {
+        padding: 20px;
+    }
+    #album2 img {
+        border-radius: 20%;
+        width: auto;
+        height: auto;
+    }
+    #album3 {
+        background: #243754;
+        color: white;
+        grid-area: album3;
+    }
+    #album3 p {
+        padding: 20px;
+    }
+    #album3 img {
+        border-radius: 20%;
+        width: auto;
+        height: auto;
+    }
+    #single1 {
+        background: grey;
+        color: white;
+        grid-area: single1;
+    }
+    #single1 p {
+        padding: 20px;
+    }
+    #single1 img {
+        border-radius: 20%;
+        width: auto;
+        height: auto;
+    }
+    #timeline {
+        padding: auto;
+        margin: auto;
+    }
+    #timeline ul li {
+        text-align: start;
+        list-style-type: none;
+    }
+    #footer {
+        background: whitesmoke;
+        grid-area: footer; 
+    }
+}
